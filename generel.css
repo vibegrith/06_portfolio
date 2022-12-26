@@ -1,5 +1,31 @@
+html {
+  --text-color: #2b9f94;
+}
+
 body {
   width: 100%;
   background-image: url(img/forside.svg);
   background-size: cover;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: "Happy Monkey", cursive;
+  font-size: 1.5rem;
+}
+
+nav ul li {
+  margin-right: 7%;
 }
