@@ -1,0 +1,5 @@
+body {
+  width: 100%;
+  background-image: url(img/forside.svg);
+  background-size: cover;
+}
