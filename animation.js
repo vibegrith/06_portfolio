@@ -18,4 +18,12 @@ function cirkelLast() {
   console.log("cirkelLast");
   document.removeEventListener("animationend", cirkelLast);
   document.querySelector("#cirkel_container2").classList.add("grow");
+  document.addEventListener("animationend", cirkelReset);
+}
+
+function cirkelReset() {
+  console.log("cirkelReset");
+  document.querySelector.classList = "";
+  document.removeEventListener("animationend", cirkelReset);
+  document.querySelector("#cirkel_container").classList.add("grow");
 }
