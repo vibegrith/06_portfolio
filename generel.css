@@ -8,15 +8,42 @@ h1 {
   font-family: "Fredoka One", cursive;
   font-size: 3rem;
   color: var(--text-color);
-  margin-top: 10%;
-  margin-bottom: 5%;
-  background-image: url("img/baggrund.svg");
+  margin: 100px auto;
+  max-width: 600px;
+  position: relative;
+}
+
+h1:before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background-color: #2b9f94;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+
+h1:after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background-color: #2b9f94;
+  right: 0;
+  top: 50%;
+  position: absolute;
 }
 
 h2 {
   text-align: center;
   font-family: "Fredoka One", cursive;
   color: var(--text-color);
+  margin-top: 5%;
+}
+
+h3 {
+  color: #2b9f94;
 }
 
 img {
@@ -24,12 +51,6 @@ img {
 }
 
 @media (min-width: 900px) {
-  .forside_img {
-    width: 100%;
-    background-image: url(img/forside.svg);
-    background-size: cover;
-  }
-
   body {
     background-color: #f5e9db;
     background-size: cover;
@@ -47,95 +68,30 @@ img {
   }
 
   a {
+    display: block;
     text-decoration: none;
     color: var(--text-color);
-    font-family: "Happy Monkey", cursive;
+    font-family: "Fredoka One", cursive;
     font-size: 1rem;
+    border-bottom: 3px solid transparent;
   }
 
   nav ul li {
-    margin-right: 7%;
+    margin-right: 70px;
   }
 
   a:hover {
-    color: #a53c58;
-    font-weight: bold;
-    font-family: "Fredoka One", cursive;
+    border-bottom: 3px solid #2b9f94;
+    padding-bottom: 16px;
   }
 
-  a:active {
-    color: #a53c58;
+  .navbar a.active {
+    border-bottom: 3px solid #2b9f94;
+    padding-bottom: 16px;
   }
+
   img {
     max-width: 100%;
-  }
-
-  #cirkel_container {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 10%;
-    aspect-ratio: 10/10;
-    top: 293px;
-    left: 970px;
-  }
-
-  #cirkel_container2 {
-    position: absolute;
-    width: 4%;
-    aspect-ratio: 10/10;
-    top: 221px;
-    left: 1110px;
-  }
-
-  #cirkel_container3 {
-    position: absolute;
-    width: 6%;
-    aspect-ratio: 10/10;
-    top: 367px;
-    left: 1174px;
-  }
-
-  #cirkel_sprite {
-    grid-row-start: 1;
-    grid-column-start: 1;
-
-    width: 100%;
-    height: 100%;
-    background-image: url(img/Artboard\ 4.svg);
-    background-size: cover;
-  }
-
-  #cirkel_sprite2 {
-    width: 100%;
-    height: 100%;
-    background-image: url(img/Artboard\ 5.svg);
-    background-size: cover;
-  }
-
-  #cirkel_sprite3 {
-    width: 100%;
-    height: 100%;
-    background-image: url(img/Artboard\ 6.svg);
-    background-size: cover;
-  }
-
-  .grow {
-    animation-name: grow_kf;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-  }
-
-  @keyframes grow_kf {
-    from {
-      scale: 0;
-    }
-
-    to {
-      scale: 1;
-    }
   }
 
   .overskrift_mobil {
@@ -167,6 +123,68 @@ img {
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .grid_1-1-1-1 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .icon {
+    width: 50%;
+  }
+
+  hr {
+    width: 80%;
+    color: #2b9f94;
+    margin-bottom: 5%;
+  }
+
+  p {
+    text-align: left;
+
+    font-size: 20px;
+    padding-right: 150px;
+    padding-left: 150px;
+    color: #2b9f94;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phone {
+    flex-basis: 40%;
+    margin-left: 20px;
+  }
+
+  .tlf {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
+  .kontakt_baggrund {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: #aac6dc;
+    padding: 60px;
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    margin: 10%;
+    text-align: center;
+  }
+
+  .bert {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+
+  .img_size {
+    width: 40%;
   }
 }
 
