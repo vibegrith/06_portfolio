@@ -15,15 +15,22 @@ h1 {
   text-align: center;
 }
 
-/* container der holder img og text */
-.container {
-  position: relative;
-  text-align: center;
+.baggrund_forside {
+  background: url(img/baggrund_memphis.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Centered text */
+.under {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .container_btn {
   display: flex;
@@ -33,9 +40,10 @@ h1 {
   width: 100%;
 }
 
+/* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
 button {
-  padding: 10px 30px;
-  font-family: "Shrikhand", cursive;
+  padding: 20px 50px;
+  font-family: "Happy Monkey", cursive;
   font-size: 1.5rem;
   overflow: hidden;
   background-color: transparent;
@@ -84,12 +92,6 @@ button:hover span {
   }
 }
 
-.baggrund_forside {
-  background-image: url("img/baggrund_memphis.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 @media (min-width: 800px) {
   h1 {
     font-family: "Shrikhand", cursive;
@@ -98,27 +100,15 @@ button:hover span {
 
   .baggrund_forside {
     background-image: url("img/baggrund_memphis.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  /* container der holder img og text */
-  .container {
-    position: relative;
-    text-align: center;
-  }
-
-  /* Centered text */
-  .center {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .under {
     position: absolute;
-    top: 40%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -134,7 +124,7 @@ button:hover span {
   /* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
   button {
     padding: 20px 50px;
-    font-family: "Shrikhand", cursive;
+    font-family: "Happy Monkey", cursive;
     font-size: 2rem;
     overflow: hidden;
     background-color: transparent;
