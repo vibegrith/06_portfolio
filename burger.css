@@ -1,0 +1,94 @@
+.banner {
+  background: #e9d6dcbe;
+  padding: 2rem;
+
+  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px 40px;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+
+  /* 2. Få elementerne til at stå ved siden af hinanden */
+  display: flex;
+  gap: 3rem;
+}
+
+/* burgermenu */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 1200px) {
+  .toggle-btn {
+    display: block;
+    color: #0137bb;
+    font-family: "Fredoka One", cursive;
+  }
+
+  .main-menu.shown {
+    display: contents;
+  }
+
+  .main-menu ul {
+    display: none;
+  }
+
+  li a {
+    color: #0137bb;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+  }
+
+  .main-menu.shown ul {
+    border-top: 1px solid #0137bb;
+    padding-top: 1rem;
+    display: flex;
+    flex-flow: column;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .toggle-btn {
+    display: block;
+    color: #0137bb;
+    font-family: "Fredoka One", cursive;
+  }
+
+  .main-menu.shown {
+    display: contents;
+  }
+
+  .main-menu ul {
+    display: none;
+  }
+
+  li a {
+    color: #0137bb;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+  }
+
+  .main-menu.shown ul {
+    border-top: 1px solid #0137bb;
+    padding-top: 1rem;
+    display: flex;
+    flex-flow: column;
+    flex-basis: 100%;
+  }
+}

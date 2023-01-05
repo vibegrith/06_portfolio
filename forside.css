@@ -6,35 +6,24 @@
 
 body {
   width: 100%;
-  background-size: cover;
   background-color: #f5e9db;
 }
 
 h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 10rem;
+  font-size: 3rem;
+  text-align: center;
 }
 
 /* container der holder img og text */
 .container {
   position: relative;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Centered text */
-.center {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.under {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 .container_btn {
   display: flex;
@@ -44,11 +33,10 @@ h1 {
   width: 100%;
 }
 
-/* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
 button {
-  padding: 20px 50px;
+  padding: 10px 30px;
   font-family: "Shrikhand", cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
   overflow: hidden;
   background-color: transparent;
   border: 1px solid black;
@@ -93,5 +81,105 @@ button:hover span {
   100% {
     opacity: 0;
     transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.baggrund_forside {
+  background-image: url("img/baggrund_memphis.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-family: "Shrikhand", cursive;
+    font-size: 10rem;
+  }
+
+  .baggrund_forside {
+    background-image: url("img/baggrund_memphis.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* container der holder img og text */
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  /* Centered text */
+  .center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .under {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;
+  }
+
+  /* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
+  button {
+    padding: 20px 50px;
+    font-family: "Shrikhand", cursive;
+    font-size: 2rem;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid black;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  /* Effekten inde i button, med cirkel der er blå med opacity og er placeret i midten. opacity er 0 så den ikke er på før hover effekten */
+
+  button span {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 255, 0.585);
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  /* hover effekten der sætter animation igang */
+
+  button:hover span {
+    animation: button_animation 1s ease;
+  }
+
+  /* starter fra opacity 0 til 30% 1 og tilbage til 0 ved 100%, så cirkeln vokser og bliver tydligere */
+
+  @keyframes button_animation {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    30% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 }
