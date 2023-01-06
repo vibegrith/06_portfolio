@@ -1,0 +1,55 @@
+#kulklump_container {
+  width: 100%;
+  aspect-ratio: 10/10;
+}
+#kulklump_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url("img/Kul.svg");
+  background-size: cover;
+}
+
+#guldklump_container {
+  width: 100%;
+  aspect-ratio: 10/10;
+}
+
+#guldklump_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url("img/guldklump.svg");
+  background-size: cover;
+}
+
+.spin {
+  animation-name: spin_kf;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin_kf {
+  from {
+    rotate: 0;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+.bouncing {
+  animation-name: bouncing_kf;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bouncing_kf {
+  from {
+    translate: 0 10%;
+  }
+  to {
+    translate: 0% -17%;
+  }
+}

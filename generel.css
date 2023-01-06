@@ -1,3 +1,4 @@
+/* Reset*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,13 +16,20 @@ img {
   width: 100%;
 }
 
+body {
+  width: 100%;
+  background-color: #f5e9db;
+}
+
+/* Største overskrift på sider, before og after bestemmer linierne ved siden af*/
+
 h1 {
   text-align: center;
   font-family: "Shrikhand", cursive;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--text-color);
-  margin: 100px auto;
-  max-width: 600px;
+  margin: 50px auto;
+  max-width: 500px;
   position: relative;
 }
 
@@ -30,12 +38,17 @@ h2 {
   font-family: "Shrikhand", cursive;
   color: var(--text-color);
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 h3 {
   color: #0137bb;
+  margin-top: 30px;
+  font-size: 2rem;
 }
 
+/* MENU*/
+/* logo størrelse og hvor det er placeret*/
 .logo {
   height: 80px;
   float: right;
@@ -60,41 +73,80 @@ a.active {
   padding-bottom: 16px;
 }
 
-hr {
-  display: none;
+/*PORTFOLIO*/
+
+/*ABOUT*/
+
+.grid_1-1-1-1 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-@media (min-width: 900px) {
+hr {
+  width: 100%;
+  color: #0137bb;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+p {
+  font-size: 10px;
+  margin-left: 10px;
+  color: #0137bb;
+}
+
+.kontakt_baggrund {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: #e9d6dc;
+  padding: 60px;
+  border-top-right-radius: 75px;
+  border-bottom-left-radius: 75px;
+  margin: 10%;
+  text-align: center;
+}
+
+.bert {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
+
+.img_size {
+  width: 40%;
+}
+
+/*MOBILSITE*/
+
+.link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: "Fredoka One", cursive;
+  font-size: 1rem;
+  border-bottom: 3px solid transparent;
+}
+
+@media (min-width: 1000px) {
+  body {
+    width: 100%;
+    background-color: #f5e9db;
+  }
+
+  /* Generel*/
   h1 {
     text-align: center;
     font-family: "Shrikhand", cursive;
     font-size: 3rem;
-    color: var(--text-color);
-    margin: 100px auto;
+    color: #0137bb;
+    margin: 80px auto;
     max-width: 600px;
     position: relative;
-  }
-
-  h1:before {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 2px;
-    background-color: #0137bb;
-    left: 0;
-    top: 50%;
-    position: absolute;
-  }
-
-  h1:after {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 2px;
-    background-color: #0137bb;
-    right: 0;
-    top: 50%;
-    position: absolute;
   }
 
   h2 {
@@ -106,6 +158,7 @@ hr {
 
   h3 {
     color: #0137bb;
+    text-align: center;
   }
 
   body {
@@ -113,23 +166,10 @@ hr {
     background-size: cover;
   }
 
-  .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+  /* MENU DESKTOP*/
 
   .logo {
     height: 80px;
-  }
-
-  .nav-list {
-    list-style: none;
-  }
-
-  .nav-list .list-item {
-    display: inline-block;
-    padding: 40px 40px;
   }
 
   a {
@@ -146,7 +186,7 @@ hr {
     padding-bottom: 16px;
   }
 
-  .navbar a.active {
+  a.active {
     border-bottom: 3px solid #0137bb;
     padding-bottom: 16px;
   }
@@ -155,19 +195,19 @@ hr {
     max-width: 100%;
   }
 
+  /*PORTFOLIO*/
+
   .grid_1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
   }
 
-  .link_side {
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 10%;
+  .scale:hover {
+    transform: scale(1.1);
   }
+
+  /*ABOUT*/
 
   .grid_1-1 {
     display: grid;
@@ -178,12 +218,9 @@ hr {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  .icon {
-    width: 50%;
-  }
-
   hr {
     width: 100%;
+
     color: #0137bb;
     margin-bottom: 5%;
     margin-top: 5%;
@@ -191,28 +228,12 @@ hr {
 
   p {
     text-align: left;
-
+    line-height: 30px;
     font-size: 20px;
-    padding-right: 150px;
-    padding-left: 150px;
-    color: #0137bb;
-  }
-
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .phone {
-    flex-basis: 40%;
-    margin-left: 20px;
-  }
-
-  .tlf {
-    font-size: 20px;
+    padding-right: 10px;
     padding-left: 10px;
-    padding-right: 20px;
+    padding-bottom: 20px;
+    color: #0137bb;
   }
 
   .kontakt_baggrund {
@@ -237,38 +258,82 @@ hr {
     width: 40%;
   }
 
-  .scale:hover {
-    transform: scale(1.1);
-  }
+  /*MOBILSITE*/
 
   .link {
     text-align: center;
-  }
-}
-
-@media (max-width: 900px) {
-  body {
-    background-color: #f5e9db;
+    margin-top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
   }
 
-  .cirkel_sprite,
-  .cirkel_sprite2,
-  .cirkel_sprite3 {
-    background-image: none;
-  }
-  .baggrund_img {
-    color: #2b9f94;
-    background-color: #aac6dc;
-    border-radius: 30px;
-    margin-right: 5%;
-    padding: 2%;
+  /*EMNESITE*/
+
+  .link:hover {
+    color: white;
   }
 
-  .link_side {
-    font-size: 1.5rem;
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 50px;
+  }
+
+  /*UXSITE*/
+
+  .grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+  }
+
+  .img_text {
+    font-size: 1rem;
+    margin-top: 20px;
+    line-height: 30px;
+  }
+
+  /*ANIMATIONSITE*/
+  .image_hover {
+    position: relative;
+    width: 600px;
+    margin-left: 80px;
+  }
+
+  .image__img {
+    display: block;
+    width: 100%;
+  }
+
+  .image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(244, 169, 169, 0.6);
+    color: blue;
+    border-radius: 50%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 10%;
+    opacity: 0;
+  }
+
+  .image__overlay:hover {
+    opacity: 1;
+  }
+
+  .image__title {
+    font-size: 2rem;
+    font-weight: bold;
   }
 }
