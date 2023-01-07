@@ -3,13 +3,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 html {
   --text-color: #0137bb;
   color: #aac6dc;
   font-family: "Fredoka One", cursive;
   font-family: "Shrikhand", cursive;
-  font-family: "Happy Monkey", cursive;
+  font-family: "Poppins", sans-serif;
 }
 
 img {
@@ -18,33 +19,40 @@ img {
 
 body {
   width: 100%;
-  background-color: #f5e9db;
 }
-
-/* Største overskrift på sider, before og after bestemmer linierne ved siden af*/
 
 h1 {
   text-align: center;
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
-  color: var(--text-color);
-  margin: 50px auto;
-  max-width: 500px;
-  position: relative;
+  margin: 20px;
 }
 
 h2 {
   text-align: center;
-  font-family: "Shrikhand", cursive;
+  font-family: "Fredoka One", cursive;
   color: var(--text-color);
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 1rem;
 }
 
 h3 {
   color: #0137bb;
   margin-top: 30px;
-  font-size: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: black;
+  font-family: "Poppins", sans-serif;
 }
 
 /* MENU*/
@@ -62,18 +70,72 @@ li a {
   font-family: "Fredoka One", cursive;
 }
 
-.hover:hover {
-  border-bottom: 3px solid #0137bb;
-  transition: 0.2s;
-  padding-bottom: 16px;
-}
-
-a.active {
-  border-bottom: 3px solid #0137bb;
-  padding-bottom: 16px;
-}
-
 /*PORTFOLIO*/
+.btn_port {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+}
+
+/* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
+button {
+  padding: 20px 50px;
+  font-family: "Happy Monkey", cursive;
+  font-size: 1.5rem;
+  overflow: hidden;
+  background-color: transparent;
+  border: 1px solid black;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Effekten inde i button, med cirkel der er blå med opacity og er placeret i midten. opacity er 0 så den ikke er på før hover effekten */
+
+button span {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 255, 0.585);
+  z-index: -1;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+/* hover effekten der sætter animation igang */
+
+button:hover span {
+  animation: button_animation 1s ease;
+}
+
+/* starter fra opacity 0 til 30% 1 og tilbage til 0 ved 100%, så cirkeln vokser og bliver tydligere */
+
+@keyframes button_animation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
 
 /*ABOUT*/
 
@@ -81,17 +143,15 @@ a.active {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 hr {
   width: 100%;
   color: #0137bb;
   margin-bottom: 5%;
-  margin-top: 5%;
-}
-
-p {
-  font-size: 10px;
-  margin-left: 10px;
-  color: #0137bb;
 }
 
 .kontakt_baggrund {
@@ -132,20 +192,36 @@ a {
   border-bottom: 3px solid transparent;
 }
 
-@media (min-width: 1000px) {
-  body {
-    width: 100%;
-    background-color: #f5e9db;
-  }
+.img_width {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
-  /* Generel*/
+/*MOBILSITE*/
+
+.img_text {
+  font-size: 10px;
+}
+
+.link {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1rem;
+  font-family: "Shrikhand", cursive;
+}
+
+/**TABLET**/
+
+@media (min-width: 800px) {
+  /*Største overskrift på sider, before og after bestemmer linierne ved siden af*/
   h1 {
     text-align: center;
     font-family: "Shrikhand", cursive;
-    font-size: 3rem;
-    color: #0137bb;
-    margin: 80px auto;
-    max-width: 600px;
+    font-size: 2.5rem;
+    margin: 50px auto;
+    max-width: 500px;
     position: relative;
   }
 
@@ -154,22 +230,209 @@ a {
     font-family: "Shrikhand", cursive;
     color: var(--text-color);
     margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  h3 {
+    color: #0137bb;
+    margin-top: 30px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* MENU*/
+  /* logo størrelse og hvor det er placeret*/
+  .logo {
+    height: 90px;
+  }
+
+  li a {
+    color: #0137bb;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+  }
+
+  /*PORTFOLIO*/
+  .btn_port {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .container_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;
+  }
+
+  /* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
+  button {
+    padding: 20px 50px;
+    font-family: "Happy Monkey", cursive;
+    font-size: 1.5rem;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid black;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  /* Effekten inde i button, med cirkel der er blå med opacity og er placeret i midten. opacity er 0 så den ikke er på før hover effekten */
+
+  button span {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 255, 0.585);
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  /* hover effekten der sætter animation igang */
+
+  button:hover span {
+    animation: button_animation 1s ease;
+  }
+
+  /* starter fra opacity 0 til 30% 1 og tilbage til 0 ved 100%, så cirkeln vokser og bliver tydligere */
+
+  @keyframes button_animation {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    30% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  /*ABOUT*/
+
+  .grid_1-1-1-1 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .img_width {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+
+  hr {
+    width: 100%;
+    color: #0137bb;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  p {
+    font-size: 22px;
+    margin: 20px;
+    line-height: 30px;
+    color: black;
+  }
+
+  .kontakt_baggrund {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: #e9d6dc;
+    padding: 60px;
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    margin: 10%;
+    text-align: center;
+  }
+
+  .bert {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+
+  .img_size {
+    width: 40%;
+  }
+
+  /*MOBILSITE*/
+
+  .link {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+    font-family: "Shrikhand", cursive;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: "Fredoka One", cursive;
+    font-size: 1rem;
+    border-bottom: 3px solid transparent;
+  }
+
+  .img_text {
+    font-size: 1rem;
+    margin-top: 20px;
+    line-height: 30px;
+  }
+
+  /*ANIMATIONSITE*/
+
+  .guld_size {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1001px) {
+  /* Generel*/
+
+  h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    color: black;
+  }
+  h2 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 2rem;
   }
 
   h3 {
     color: #0137bb;
     text-align: center;
-  }
-
-  body {
-    background-color: #f5e9db;
-    background-size: cover;
+    font-family: "Poppins", sans-serif;
   }
 
   /* MENU DESKTOP*/
 
   .logo {
-    height: 80px;
+    height: 100px;
   }
 
   a {
@@ -195,16 +458,114 @@ a {
     max-width: 100%;
   }
 
+  .img_width {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
   /*PORTFOLIO*/
+
+  .img_hover {
+    width: 300px;
+    height: 300px;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .img_hover img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image_top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.7s ease;
+  }
+
+  .image_top:hover {
+    opacity: 1;
+  }
 
   .grid_1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
+    column-gap: 5px;
+    margin: 5px;
   }
 
-  .scale:hover {
-    transform: scale(1.1);
+  .btn_port {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .container_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;
+  }
+
+  /* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
+  button {
+    padding: 20px 50px;
+    font-family: "Happy Monkey", cursive;
+    font-size: 1.5rem;
+    overflow: hidden;
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid transparent;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  /* Effekten inde i button, med cirkel der er blå med opacity og er placeret i midten. opacity er 0 så den ikke er på før hover effekten */
+
+  button span {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 255, 0.585);
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  /* hover effekten der sætter animation igang */
+
+  button:hover span {
+    animation: button_animation 1s ease;
+  }
+
+  /* starter fra opacity 0 til 30% 1 og tilbage til 0 ved 100%, så cirkeln vokser og bliver tydligere */
+
+  @keyframes button_animation {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    30% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .image_size {
+    width: 50%;
   }
 
   /*ABOUT*/
@@ -220,10 +581,9 @@ a {
 
   hr {
     width: 100%;
-
     color: #0137bb;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-top: 1%;
   }
 
   p {
@@ -233,7 +593,7 @@ a {
     padding-right: 10px;
     padding-left: 10px;
     padding-bottom: 20px;
-    color: #0137bb;
+    color: black;
   }
 
   .kontakt_baggrund {
@@ -303,8 +663,7 @@ a {
   /*ANIMATIONSITE*/
   .image_hover {
     position: relative;
-    width: 600px;
-    margin-left: 80px;
+    width: 250px;
   }
 
   .image__img {

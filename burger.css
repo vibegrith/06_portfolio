@@ -1,5 +1,8 @@
 .banner {
-  background: #e9d6dcbe;
+  background: url(img/mellemgrund.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 2rem;
 
   /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
