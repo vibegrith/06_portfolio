@@ -14,6 +14,11 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
 .baggrund_forside {
   background: url(img/baggrund_memphis.svg);
   background-repeat: no-repeat;
@@ -26,7 +31,14 @@ h1 {
 
 .under {
   position: absolute;
-  top: 60%;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navn {
+  position: absolute;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -42,7 +54,7 @@ h1 {
 /* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
 button {
   padding: 20px 50px;
-  font-family: "Happy Monkey", cursive;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   overflow: hidden;
   background-color: transparent;
@@ -96,7 +108,10 @@ button:hover span {
     font-family: "Shrikhand", cursive;
     font-size: 10rem;
   }
-
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+  }
   .baggrund_forside {
     background-image: url("img/baggrund_memphis.svg");
     height: 100vh;
@@ -112,6 +127,13 @@ button:hover span {
     transform: translate(-50%, -50%);
   }
 
+  .navn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   .container_btn {
     display: flex;
     align-items: center;
@@ -123,7 +145,7 @@ button:hover span {
   /* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
   button {
     padding: 20px 50px;
-    font-family: "Happy Monkey", cursive;
+    font-family: "Poppins", sans-serif;
     font-size: 2rem;
     overflow: hidden;
     background-color: transparent;
