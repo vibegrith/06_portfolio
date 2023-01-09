@@ -53,8 +53,8 @@ h2 {
 
 /* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
 button {
-  padding: 20px 50px;
-  font-family: "Poppins", sans-serif;
+  padding: 20px 30px;
+  font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   overflow: hidden;
   background-color: transparent;
@@ -63,6 +63,7 @@ button {
   position: relative;
   z-index: 1;
   cursor: pointer;
+  border-radius: 30px;
 }
 
 /* Effekten inde i button, med cirkel der er blå med opacity og er placeret i midten. opacity er 0 så den ikke er på før hover effekten */
@@ -145,7 +146,7 @@ button:hover span {
   /* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
   button {
     padding: 20px 50px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Shrikhand", cursive;
     font-size: 2rem;
     overflow: hidden;
     background-color: transparent;
@@ -154,6 +155,7 @@ button:hover span {
     position: relative;
     z-index: 1;
     cursor: pointer;
+    border-radius: 40px;
   }
 
   /* Effekten inde i button, med cirkel der er blå med opacity og er placeret i midten. opacity er 0 så den ikke er på før hover effekten */

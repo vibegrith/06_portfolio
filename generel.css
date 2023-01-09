@@ -16,17 +16,20 @@ html {
 img {
   width: 100%;
 }
-
+/*Så content kan ses under fixed menu*/
 body {
   width: 100%;
+  margin-top: 200px;
 }
 
 h1 {
   text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
   margin: 20px;
-  color: #0137bb;
+  color: black;
+  margin: 20px auto;
+  max-width: 400px;
 }
 
 h2 {
@@ -35,19 +38,19 @@ h2 {
   color: var(--text-color);
   margin-top: 20px;
   margin-bottom: 5px;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 h3 {
   color: #0137bb;
   margin-top: 30px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
 
 p {
-  font-size: 15px;
+  font-size: 12px;
   line-height: 20px;
   margin-bottom: 10px;
   margin-left: 15px;
@@ -59,7 +62,8 @@ p {
 ul li {
   font-family: "Poppins", sans-serif;
   color: black;
-  margin-left: 20px;
+  margin-left: 30px;
+  font-size: 12px;
 }
 
 /* MENU*/
@@ -82,6 +86,7 @@ li a {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .container_btn {
@@ -94,9 +99,9 @@ li a {
 
 /* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
 button {
-  padding: 20px 50px;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  padding: 10px 40px;
+  font-family: "Shrikhand", cursive;
+  font-size: 1rem;
   overflow: hidden;
   background-color: transparent;
   border: 1px solid black;
@@ -104,6 +109,8 @@ button {
   position: relative;
   z-index: 1;
   cursor: pointer;
+  color: black;
+  border-radius: 20px;
 }
 
 /* Effekten inde i button, med cirkel der er blå med opacity og er placeret i midten. opacity er 0 så den ikke er på før hover effekten */
@@ -195,20 +202,20 @@ hr {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .img_size {
   width: 40%;
 }
 
-/*MOBILSITE*/
-
-.link {
-  text-align: center;
-  margin-top: 20px;
-  font-family: "Poppins", sans-serif;
+.img_vibe {
+  margin-top: 30px;
+  border-radius: 20px;
+  width: 100%;
 }
+
+/*MOBILSITE*/
 
 a {
   display: block;
@@ -234,9 +241,13 @@ a {
 
 .link {
   text-align: center;
-  margin-top: 30px;
-  font-size: 1rem;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: black;
   font-family: "Shrikhand", cursive;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 /**TABLET**/
@@ -245,8 +256,8 @@ a {
   /*Største overskrift på sider, before og after bestemmer linierne ved siden af*/
   h1 {
     text-align: center;
-    font-family: "Poppins", sans-serif;
-    color: #0137bb;
+    font-family: "Shrikhand", cursive;
+    color: black;
     font-size: 2.5rem;
     margin: 50px auto;
     max-width: 500px;
@@ -259,12 +270,13 @@ a {
     color: var(--text-color);
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 2rem;
   }
 
   h3 {
     color: #0137bb;
     margin-top: 30px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     font-family: "Poppins", sans-serif;
   }
@@ -301,7 +313,7 @@ a {
   /* Button udseende, z-index er 1 så man kan se teksten der ligger uden på farven */
   button {
     padding: 20px 50px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Shrikhand", cursive;
     font-size: 1.5rem;
     overflow: hidden;
     background-color: transparent;
@@ -310,6 +322,7 @@ a {
     position: relative;
     z-index: 1;
     cursor: pointer;
+    border-radius: 30px;
   }
 
   /* Effekten inde i button, med cirkel der er blå med opacity og er placeret i midten. opacity er 0 så den ikke er på før hover effekten */
@@ -383,7 +396,7 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 500px;
   }
 
   hr {
@@ -398,17 +411,6 @@ a {
     margin: 20px;
     line-height: 30px;
     color: black;
-  }
-
-  .kontakt_baggrund {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    background-color: #e9d6dc;
-    padding: 60px;
-    border-top-right-radius: 75px;
-    border-bottom-left-radius: 75px;
-    margin: 10%;
-    text-align: center;
   }
 
   .bert {
@@ -427,8 +429,9 @@ a {
   .link {
     text-align: center;
     margin-top: 30px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: "Shrikhand", cursive;
+    border-radius: 30px;
   }
 
   a {
@@ -458,9 +461,11 @@ a {
 
   h1 {
     text-align: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Shrikhand", cursive;
     font-size: 3rem;
     color: black;
+    margin: 50px auto;
+    max-width: 1000px;
   }
   h2 {
     text-align: center;
@@ -566,12 +571,13 @@ a {
     font-size: 1.5rem;
     overflow: hidden;
     background-color: transparent;
-    font-family: "Poppins", sans-serif;
+    font-family: "Shrikhand", cursive;
     border: 1px solid black;
     outline: none;
     position: relative;
     z-index: 1;
     cursor: pointer;
+    border-radius: 40px;
   }
 
   /* Effekten inde i button, med cirkel der er blå med opacity og er placeret i midten. opacity er 0 så den ikke er på før hover effekten */
@@ -667,8 +673,9 @@ a {
   .link {
     text-align: center;
     margin-top: 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
+    border: none;
   }
 
   /*EMNESITE*/

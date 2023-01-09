@@ -1,9 +1,15 @@
 .banner {
   background: url(img/mellemgrund.svg);
+  background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
 
   /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
   display: flex;
