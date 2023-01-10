@@ -38,7 +38,7 @@ h2 {
   color: var(--text-color);
   margin-top: 20px;
   margin-bottom: 5px;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 h3 {
@@ -54,6 +54,7 @@ p {
   line-height: 20px;
   margin-bottom: 10px;
   margin-left: 15px;
+  margin-right: 15px;
   margin-top: 10px;
   color: black;
   font-family: "Poppins", sans-serif;
@@ -153,7 +154,7 @@ button:hover span {
 
 .img_hover {
   width: 200px;
-  height: 200px;
+  height: 115px;
   margin-top: 40px;
   position: relative;
 }
@@ -172,10 +173,6 @@ button:hover span {
 
 /*ABOUT*/
 
-.grid_1-1-1-1 {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
 .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr;
@@ -185,17 +182,6 @@ hr {
   width: 100%;
   color: #0137bb;
   margin-bottom: 5%;
-}
-
-.kontakt_baggrund {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  background-color: #e9d6dc;
-  padding: 60px;
-  border-top-right-radius: 75px;
-  border-bottom-left-radius: 75px;
-  margin: 10%;
-  text-align: center;
 }
 
 .bert {
@@ -226,18 +212,21 @@ a {
   border-bottom: 3px solid transparent;
 }
 
+.img_width2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
 .img_width {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 70%;
 }
 
 /*MOBILSITE*/
-
-.img_text {
-  font-size: 10px;
-}
 
 .link {
   text-align: center;
@@ -267,6 +256,7 @@ a {
   h2 {
     text-align: center;
     font-family: "Poppins", sans-serif;
+    font-size: 2rem;
     color: var(--text-color);
     margin-top: 5%;
     margin-bottom: 5%;
@@ -276,7 +266,7 @@ a {
   h3 {
     color: #0137bb;
     margin-top: 30px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     font-family: "Poppins", sans-serif;
   }
@@ -295,7 +285,7 @@ a {
     font-family: "Fredoka One", cursive;
   }
 
-  /*PORTFOLIO*/
+  /*Button på sites*/
   .btn_port {
     text-align: center;
     margin-top: 20px;
@@ -333,60 +323,26 @@ a {
     width: 400px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 255, 0.585);
-    z-index: -1;
-    border-radius: 50%;
-    opacity: 0;
-  }
-
-  /* hover effekten der sætter animation igang */
-
-  button:hover span {
-    animation: button_animation 1s ease;
-  }
-
-  /* starter fra opacity 0 til 30% 1 og tilbage til 0 ved 100%, så cirkeln vokser og bliver tydligere */
-
-  @keyframes button_animation {
-    0% {
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(0);
-    }
-
-    30% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(1);
-    }
   }
 
   .img_hover {
     width: 500px;
-    height: 500px;
+    height: 200px;
     margin-top: 40px;
-    position: relative;
+  }
+  .img_width2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
   }
 
-  .img_hover img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .image_top {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   /*ABOUT*/
-
-  .grid_1-1-1-1 {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 
   .grid_1-1 {
     display: grid;
@@ -407,7 +363,7 @@ a {
   }
 
   p {
-    font-size: 22px;
+    font-size: 15px;
     margin: 20px;
     line-height: 30px;
     color: black;
@@ -422,6 +378,10 @@ a {
 
   .img_size {
     width: 40%;
+  }
+
+  ul li {
+    font-size: 1rem;
   }
 
   /*MOBILSITE*/
@@ -444,7 +404,7 @@ a {
   }
 
   .img_text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-top: 20px;
     line-height: 30px;
   }
@@ -540,6 +500,8 @@ a {
     transition: all 0.7s ease;
   }
 
+  /*Hover effekt på portfolio billder*/
+
   .image_top:hover {
     opacity: 1;
   }
@@ -554,7 +516,6 @@ a {
   .btn_port {
     text-align: center;
     margin-top: 20px;
-    display: none;
   }
 
   .container_btn {
@@ -630,10 +591,6 @@ a {
     grid-template-columns: 1fr 1fr;
   }
 
-  .grid_1-1-1-1 {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
   hr {
     width: 100%;
     color: #0137bb;
@@ -647,7 +604,6 @@ a {
     font-size: 15px;
     margin-left: 20px;
     margin: 20px;
-
     color: black;
   }
 
@@ -665,25 +621,9 @@ a {
     max-width: 100%;
   }
 
-  .img_size {
-    width: 40%;
-  }
-
   /*MOBILSITE*/
 
-  .link {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: none;
-  }
-
   /*EMNESITE*/
-
-  .link:hover {
-    color: white;
-  }
 
   .grid_1-1 {
     display: grid;
@@ -699,14 +639,7 @@ a {
 
   /*UXSITE*/
 
-  .grid_1-1-1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
+  /*Tekst under billeder*/
   .img_text {
     font-size: 0.8rem;
     margin-top: 20px;
@@ -714,43 +647,16 @@ a {
   }
 
   /*ANIMATIONSITE*/
-  .image_hover {
-    position: relative;
-    width: 250px;
-  }
-
-  .image__img {
-    display: block;
-    width: 100%;
-  }
-
-  .image__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(244, 169, 169, 0.6);
-    color: blue;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-  }
-
-  .image__overlay:hover {
-    opacity: 1;
-  }
-
-  .image__title {
-    font-size: 2rem;
-    font-weight: bold;
-  }
 
   /*PORTFOLIO*/
+
+  /*Øverste billede på portfolio site*/
   .img_size2 {
-    width: 14.7%;
+    width: 10.7%;
+  }
+  /*Gør så img med classen zommer*/
+  .zoom:hover {
+    transition: transform 0.2s;
+    transform: scale(1.5);
   }
 }

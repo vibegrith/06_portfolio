@@ -24,7 +24,7 @@
   padding: 0;
   /* 2. Få elementerne til at stå ved siden af hinanden */
   display: flex;
-  gap: 3rem;
+  gap: 2.2rem;
 }
 
 /* burgermenu */
@@ -37,7 +37,7 @@
   cursor: pointer;
   display: none;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
   .toggle-btn {
     display: block;
     color: #0137bb;
