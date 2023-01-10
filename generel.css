@@ -24,10 +24,10 @@ body {
 
 h1 {
   text-align: center;
-  font-family: "Shrikhand", cursive;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   margin: 20px;
-  color: black;
+  color: #0137bb;
   margin: 20px auto;
   max-width: 400px;
 }
@@ -245,8 +245,8 @@ a {
   /*Største overskrift på sider, before og after bestemmer linierne ved siden af*/
   h1 {
     text-align: center;
-    font-family: "Shrikhand", cursive;
-    color: black;
+    font-family: "Poppins", sans-serif;
+    color: #0137bb;
     font-size: 2.5rem;
     margin: 50px auto;
     max-width: 500px;
@@ -421,9 +421,9 @@ a {
 
   h1 {
     text-align: center;
-    font-family: "Shrikhand", cursive;
+    font-family: "Poppins", sans-serif;
     font-size: 3rem;
-    color: black;
+    color: #0137bb;
     margin-bottom: -10px;
     max-width: 1000px;
   }
