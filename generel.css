@@ -424,7 +424,7 @@ a {
     font-family: "Shrikhand", cursive;
     font-size: 3rem;
     color: black;
-    margin: 50px auto;
+    margin-bottom: -10px;
     max-width: 1000px;
   }
   h2 {
